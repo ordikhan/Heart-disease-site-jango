@@ -1,0 +1,33 @@
+
+
+
+
+.full_width {
+    width:100%;
+}
+.base_margin{
+    margin: 10px 0;
+}
+
+
+
+input[type='radio']{
+    opacity: 100!important;
+    position: inherit!important;
+}
+
+input[type='checkbox']{
+    opacity: 100!important;
+    position: inherit!important;
+}
+
+.myContainer{
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#nav-mobile>li :hover:active {
+    background: white;
+    color: dimgrey;
+}

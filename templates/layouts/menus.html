@@ -1,0 +1,24 @@
+{% extends 'layouts/base.html' %}
+{% block navbar %}
+<nav>
+    <div class="nav-wrapper cyan darken-3">
+      <a href="#" class="brand-logo right">Ai Medical Tools</a>
+         <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'ai-tools' %}">Tools</a></li>
+        <li><a href="{% url 'article' %}">Articles</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'contact' %}">Contact us</a></li>
+      </ul>
+    </div>
+  </nav>
+     <ul class="sidenav" id="mobile-demo">
+    <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'ai-tools' %}">Tools</a></li>
+        <li><a href="{% url 'article' %}">Articles</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+        <li><a href="{% url 'contact' %}">Contact us</a></li>
+
+  </ul>
+{% endblock %}

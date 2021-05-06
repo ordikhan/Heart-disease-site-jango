@@ -1,0 +1,45 @@
+{% extends 'layouts/menus.html' %}
+{% load static %}
+{% load materializecss %}
+
+{% block base_content %}
+    <div class="container ">
+        <div class="row">
+            <ul class="collapsible full_width">
+                <li>
+                    <div class="collapsible-header center-align red-text"><img class="full_width base_margin" src="{% static 'images/banner.png' %}" alt=""></div>
+                    <div class="collapsible-body white">
+                        <form method="get">
+                            <table>
+                            {{ home_form.as_table }}
+                                </table>
+                        </form>
+                        <br>
+                        <button class="btn"> Calculate</button>
+                    </div>
+                </li>
+            </ul>
+            <div class="col m12">
+            </div>
+            {% for article in articles %}
+
+                <div class="col s12 m4">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="{{ article.image }}">
+                            <span class="card-title grey lighten-1 center-align"
+                                  style="padding: 0;width: 100%">{{ article.title }}</span>
+                        </div>
+                        <div class="card-content">
+                            <p>{{ article.body | truncatewords:20 }}</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#">This is a link</a>
+                        </div>
+                    </div>
+                </div>
+
+            {% endfor %}
+    </div>
+    </div>
+{% endblock %}
